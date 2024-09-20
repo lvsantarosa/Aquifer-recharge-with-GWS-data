@@ -5,4 +5,4 @@ specified area of interest. The output includes both raster and shapefile format
 See how to download the GWS data here:
 https://github.com/lvsantarosa/NASA-data-download
 
-This data can be downloaded from Google Earth Engine using the Google Colab
+This data can be downloaded from Google Earth Engine using the Google Colab exemple.
