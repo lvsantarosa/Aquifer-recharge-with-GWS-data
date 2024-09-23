@@ -161,22 +161,3 @@ for (year in years) {
   
   writeRaster(raster, glue('02_RESULTADOS/RECHARGE_SAB_GWS_GRACE_{year}.tif'), overwrite=TRUE)
 }
-
-
-# Extract data for the wells --------------------------------------------
-
-
-wells <- vect('00_SHP/00_LIMITE_AREA/Pocos/Pocos.shp') %>% project(CRS)
-plot(wells)
-print(wells$Object_ID)
-wells$ID <- wells$Object_ID
-
-recharge_file_list <- list.files('02_RESULTADOS/', full.names = TRUE, pattern = '.tif$')
-recharge_year <- rast(recharge_file_list)
-
-wells_recharge <- terra::extract(recharge_year, wells)
-wells_recharge <- merge(wells, wells_recharge, by = 'ID')
-names(wells_recharge)
-
-writeVector(wells_recharge, '02_RESULTADOS/RECHARGE_GWS_GRACE_WELLS_SAB_HY_2004-2021.shp', overwrite=TRUE)
-write.csv(wells_recharge, '02_RESULTADOS/RECHARGE_GWS_GRACE_WELLS_SAB_HY_2004-2021.csv')
