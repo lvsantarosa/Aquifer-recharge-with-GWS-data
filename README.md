@@ -8,3 +8,7 @@ See how to download the GWS data here:
 https://github.com/lvsantarosa/NASA-data-download
 
 This data can be downloaded from Google Earth Engine using the Google Colab exemple.
+
+## The following paper was written using this method:
+
+Santarosa, L. V., Pinto, G. V. F., Blandón Luengas, J. S., & Gastmans, D. (2024). Remote sensing to quantify potential aquifer recharge as a complementary tool for groundwater monitoring. Hydrological Sciences Journal. https://doi.org/10.1080/02626667.2024.2412741
