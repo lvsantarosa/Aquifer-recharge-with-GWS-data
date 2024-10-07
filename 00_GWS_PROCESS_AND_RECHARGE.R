@@ -21,8 +21,8 @@ file_list <- list.files(path = '01_GWS/01_DADOS/SAB_GWS/', full.names = TRUE, pa
 CRS <- "+proj=longlat +datum=WGS84"
 
 # Filtering the shapefile for the state of interest
-shp <- vect('00_SHP/00_LIMITE_AREA/Limite_areaSIRGAS2000.shp') %>% # Define the file
-  project(CRS)                                                # Convert the CRS for clipping
+shp <- vect('00_SHP/00_LIMITE_AREA/GRID.gpkg') %>% # Define the file
+       project(CRS)                                                # Convert the CRS for clipping
 
 # Loading the raster file
 gws <- terra::rast(file_list) %>% crop(shp)
