@@ -63,8 +63,7 @@ for(i in 1:length(GRID$ID)){
       WaterLevelChange = WaterLevel - lag(WaterLevel, default = first(WaterLevel))
     )
   
-  # Step 3: Apply WTF methodology
-  # Minimum significant variation 
+  # Step 3: Minimum significant variation 
   threshold <- 0.5
   data <- data %>%
     mutate(
