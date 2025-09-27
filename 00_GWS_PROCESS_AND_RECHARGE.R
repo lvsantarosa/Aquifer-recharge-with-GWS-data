@@ -1,7 +1,3 @@
-########################################################################
-# Script to calculate daily difference, accumulate, and obtain the annual maximum value per pixel
-# Author: Lucas Vituri Santarosa 
-########################################################################
 
 setwd('c:/Users/lucas/Documents/02_ARTIGOS/04_BAURU_GWS/')
 
@@ -159,4 +155,5 @@ for (year in years) {
   
   writeRaster(raster, glue('02_RESULTADOS/RECHARGE_SAB_GWS_GRACE_{year}.tif'), overwrite=TRUE)
 }
+
 
